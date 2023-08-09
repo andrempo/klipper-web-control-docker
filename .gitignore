@@ -2,3 +2,4 @@ printer.cfg
 !config/printer.cfg
 .config
 config/klipper-*
+build
