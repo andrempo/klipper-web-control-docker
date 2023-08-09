@@ -23,6 +23,7 @@ services:
       # - ./printer.cfg:/home/klippy/.config/printer.cfg
       - '/run/udev:/run/udev:ro'
       - '/dev:/dev'
+      - '/tmp:/tmp-host'
     privileged: true
 
 
@@ -31,6 +32,7 @@ services:
     build:
       dockerfile: Dockerfile
       context: frontend
+      network: host
     restart: unless-stopped
     container_name: fluidd
     ports:
